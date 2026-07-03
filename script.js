@@ -1,4 +1,4 @@
-﻿const typingText = document.getElementById('typingText'); 
+const typingText = document.getElementById('typingText'); 
 const navToggle = document.getElementById('navToggle'); 
 const siteHeader = document.querySelector('.site-header'); 
 const overlay = document.getElementById('pageOverlay'); 
