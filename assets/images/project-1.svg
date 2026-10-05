@@ -1,1 +1,71 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6BB6E8"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs><rect width="1200" height="760" rx="48" fill="url(#g)"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="72" fill="#1A1A1A">Multiple Disease Prediction</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Multiple Disease Prediction app interface">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1120"/><stop offset="1" stop-color="#142640"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <clipPath id="win"><rect x="40" y="40" width="1120" height="680" rx="22"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="200" fill="#38BDF8" opacity="0.1"/>
+  <circle cx="120" cy="700" r="180" fill="#818CF8" opacity="0.1"/>
+  <rect x="40" y="40" width="1120" height="680" rx="22" fill="#0B1526" stroke="#1E293B" stroke-width="2"/>
+
+  <g clip-path="url(#win)" font-family="Inter, system-ui, sans-serif">
+    <rect x="40" y="40" width="1120" height="58" fill="#0F1D33"/>
+    <circle cx="80" cy="69" r="8" fill="#F87171"/>
+    <circle cx="110" cy="69" r="8" fill="#FBBF24"/>
+    <circle cx="140" cy="69" r="8" fill="#34D399"/>
+    <text x="600" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="23" fill="#64748B">disease-predictor.streamlit.app</text>
+    <line x1="40" y1="98" x2="1160" y2="98" stroke="#1E293B" stroke-width="2"/>
+
+    <rect x="40" y="98" width="290" height="622" fill="#0A1120"/>
+    <line x1="330" y1="98" x2="330" y2="720" stroke="#1E293B" stroke-width="2"/>
+    <rect x="64" y="132" width="242" height="54" rx="12" fill="#38BDF8" fill-opacity="0.16" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="2"/>
+    <text x="88" y="167" font-size="26" fill="#38BDF8">Diabetes</text>
+    <text x="88" y="231" font-size="26" fill="#94A3B8">Heart Disease</text>
+    <text x="88" y="295" font-size="26" fill="#94A3B8">Calories Burn</text>
+
+    <text x="364" y="156" font-family="Space Grotesk, Inter, sans-serif" font-size="42" font-weight="700" fill="#F1F5F9">Diabetes Prediction</text>
+    <text x="364" y="198" font-size="24" fill="#64748B">Enter patient details below</text>
+
+    <text x="364" y="266" font-size="26" fill="#CBD5E1">Glucose</text>
+    <text x="700" y="266" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="26" fill="#38BDF8">148</text>
+    <rect x="364" y="284" width="336" height="12" rx="6" fill="#1E293B"/>
+    <rect x="364" y="284" width="248" height="12" rx="6" fill="url(#acc)"/>
+    <circle cx="612" cy="290" r="15" fill="#38BDF8"/>
+
+    <text x="364" y="356" font-size="26" fill="#CBD5E1">BMI</text>
+    <text x="700" y="356" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="26" fill="#38BDF8">33.6</text>
+    <rect x="364" y="374" width="336" height="12" rx="6" fill="#1E293B"/>
+    <rect x="364" y="374" width="176" height="12" rx="6" fill="url(#acc)"/>
+    <circle cx="540" cy="380" r="15" fill="#38BDF8"/>
+
+    <text x="364" y="446" font-size="26" fill="#CBD5E1">Age</text>
+    <text x="700" y="446" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="26" fill="#38BDF8">50</text>
+    <rect x="364" y="464" width="336" height="12" rx="6" fill="#1E293B"/>
+    <rect x="364" y="464" width="212" height="12" rx="6" fill="url(#acc)"/>
+    <circle cx="576" cy="470" r="15" fill="#38BDF8"/>
+
+    <rect x="364" y="528" width="210" height="60" rx="30" fill="url(#acc)"/>
+    <text x="469" y="567" text-anchor="middle" font-size="26" font-weight="600" fill="#08172B">Predict</text>
+
+    <rect x="744" y="136" width="376" height="196" rx="16" fill="#38BDF8" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="2"/>
+    <text x="776" y="186" font-family="IBM Plex Mono, monospace" font-size="22" fill="#38BDF8" letter-spacing="3">PREDICTION</text>
+    <text x="776" y="258" font-family="Space Grotesk, Inter, sans-serif" font-size="56" font-weight="700" fill="#F1F5F9">Low Risk</text>
+    <text x="776" y="304" font-size="25" fill="#7FA6CC">Model accuracy 85%</text>
+
+    <text x="744" y="394" font-family="IBM Plex Mono, monospace" font-size="21" fill="#64748B" letter-spacing="2">FEATURE IMPORTANCE</text>
+    <text x="744" y="446" font-size="24" fill="#CBD5E1">Glucose</text>
+    <rect x="900" y="428" width="220" height="18" rx="9" fill="url(#acc)"/>
+    <text x="744" y="500" font-size="24" fill="#CBD5E1">BMI</text>
+    <rect x="900" y="482" width="164" height="18" rx="9" fill="url(#acc)" opacity="0.8"/>
+    <text x="744" y="554" font-size="24" fill="#CBD5E1">Age</text>
+    <rect x="900" y="536" width="120" height="18" rx="9" fill="url(#acc)" opacity="0.65"/>
+    <text x="744" y="608" font-size="24" fill="#CBD5E1">Insulin</text>
+    <rect x="900" y="590" width="84" height="18" rx="9" fill="url(#acc)" opacity="0.5"/>
+  </g>
+</svg>

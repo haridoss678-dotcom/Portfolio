@@ -1,1 +1,57 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D8E4F2"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs><rect width="1200" height="760" rx="48" fill="url(#g)"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="72" fill="#1A1A1A">Self-Hosted AI Assistant</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Self-Hosted AI Email Assistant running locally">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1526"/><stop offset="1" stop-color="#123256"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <clipPath id="win"><rect x="40" y="40" width="1120" height="680" rx="22"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="200" fill="#38BDF8" opacity="0.14"/>
+  <circle cx="120" cy="700" r="180" fill="#2563EB" opacity="0.16"/>
+  <rect x="40" y="40" width="1120" height="680" rx="22" fill="#0B1526" stroke="#1E293B" stroke-width="2"/>
+
+  <g clip-path="url(#win)" font-family="Inter, system-ui, sans-serif">
+    <rect x="40" y="40" width="1120" height="58" fill="#0F1D33"/>
+    <circle cx="80" cy="69" r="8" fill="#F87171"/>
+    <circle cx="110" cy="69" r="8" fill="#FBBF24"/>
+    <circle cx="140" cy="69" r="8" fill="#34D399"/>
+    <text x="600" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="23" fill="#64748B">gmail-auto-replier &#183; python main.py</text>
+    <line x1="40" y1="98" x2="1160" y2="98" stroke="#1E293B" stroke-width="2"/>
+
+    <rect x="70" y="130" width="530" height="462" rx="14" fill="#050B14" stroke="#1E293B" stroke-width="2"/>
+    <g font-family="IBM Plex Mono, monospace" font-size="23">
+      <text x="98" y="184"><tspan fill="#38BDF8">$</tspan><tspan fill="#E2E8F0"> python main.py</tspan></text>
+      <text x="98" y="226" fill="#64748B">Gmail Auto-Reply Server</text>
+      <text x="98" y="258" fill="#64748B">running (Ctrl+C to stop)</text>
+      <text x="98" y="318" fill="#94A3B8">Processing:</text>
+      <text x="98" y="352" fill="#E2E8F0">Invitation for Hackathon</text>
+      <text x="98" y="384" fill="#E2E8F0">2026</text>
+      <text x="98" y="436" fill="#FBBF24">Detected: Event Mail</text>
+      <text x="98" y="478" fill="#38BDF8">Classified: EVENT</text>
+      <text x="98" y="524" fill="#34D399">Reply sent successfully</text>
+      <rect x="98" y="546" width="14" height="24" fill="#34D399" opacity="0.8"/>
+    </g>
+
+    <rect x="634" y="130" width="496" height="306" rx="14" fill="#0A1120" stroke="#1E293B" stroke-width="2"/>
+    <text x="662" y="178" font-family="IBM Plex Mono, monospace" font-size="21" fill="#34D399" letter-spacing="2">AUTO-REPLY SENT</text>
+    <text x="662" y="224" font-size="23" fill="#E2E8F0">Subject: Re: Invitation for</text>
+    <text x="662" y="256" font-size="23" fill="#E2E8F0">Hackathon 2026</text>
+    <line x1="662" y1="282" x2="1102" y2="282" stroke="#1E293B" stroke-width="2"/>
+    <text x="662" y="320" font-size="21" fill="#94A3B8">Thank you for inviting our students</text>
+    <text x="662" y="352" font-size="21" fill="#94A3B8">to participate. The details will be</text>
+    <text x="662" y="384" font-size="21" fill="#94A3B8">circulated and forwarded to our</text>
+    <text x="662" y="416" font-size="21" fill="#94A3B8">Hackathon Cell for coordination.</text>
+
+    <rect x="634" y="466" width="330" height="58" rx="14" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="2"/>
+    <circle cx="666" cy="495" r="9" fill="#38BDF8"/>
+    <text x="690" y="503" font-family="IBM Plex Mono, monospace" font-size="21" fill="#7DD3FC">ollama &#183; llama3.1:8b</text>
+
+    <rect x="634" y="540" width="382" height="58" rx="14" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.4" stroke-width="2"/>
+    <path d="M660 569l10 10 17-19" fill="none" stroke="#34D399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="702" y="577" font-family="IBM Plex Mono, monospace" font-size="21" fill="#34D399">100% local &#183; no cloud API</text>
+  </g>
+</svg>

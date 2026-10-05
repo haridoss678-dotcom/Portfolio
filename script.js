@@ -1,225 +1,192 @@
-const typingText = document.getElementById('typingText'); 
-const navToggle = document.getElementById('navToggle'); 
-const siteHeader = document.querySelector('.site-header'); 
-const overlay = document.getElementById('pageOverlay'); 
-const navLinks = document.querySelectorAll('.main-nav a'); 
-const sections = document.querySelectorAll('main section'); 
+// ============================================================
+// HARIDOSS B — Portfolio interactivity
+// ============================================================
+
+const typingText = document.getElementById('typingText');
+const navToggle = document.getElementById('navToggle');
+const siteHeader = document.querySelector('.site-header');
+const overlay = document.getElementById('pageOverlay');
+const navLinks = document.querySelectorAll('.main-nav a');
+const sections = document.querySelectorAll('main section');
 const form = document.getElementById('contactForm');
-const aboutText =document.querySelector('.about-copy');
-const themeToggle = document.getElementById("themeToggle");
-const icon = themeToggle.querySelector("i");
+const feedback = document.getElementById('formFeedback');
+const themeToggle = document.getElementById('themeToggle');
 
-themeToggle.addEventListener("click", () => {
+// ---------- Theme toggle ----------
+if (themeToggle) {
+  const icon = themeToggle.querySelector('i');
 
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-
-        icon.className = "fa-solid fa-sun";
-        themeToggle.title = "Light mode";
-
-    } else {
-
-        icon.className = "fa-solid fa-moon";
-        themeToggle.title = "Dark mode";
-
-    }
-
-});
-
-
-if (aboutText) {
-
-    aboutText.classList.remove('in-view');
-
-    void aboutText.offsetWidth;
-
-    setTimeout(() => {
-        aboutText.classList.add('in-view');
-    }, 300);
-
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    if (icon) icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    themeToggle.title = isDark ? 'Light mode' : 'Dark mode';
+  });
 }
 
-
+// ---------- Hero typing animation ----------
 const lines = [
-     'I build AI solutions.',
-     'I create intelligent systems.',
-     'I love Python development.',
-     'I solve real-world problems.' 
-    ];
-    let lineIndex = 0; 
-    let letterIndex = 0; 
-    let isRemoving = false;
+  'I build AI solutions.',
+  'I create intelligent systems.',
+  'I love Python development.',
+  'I solve real-world problems.',
+];
+let lineIndex = 0;
+let letterIndex = 0;
+let isRemoving = false;
 
-    function updateTyping() { 
-        const currentLine = lines[lineIndex];
-         if (!isRemoving) {
-            letterIndex++; 
-            typingText.textContent = currentLine.slice(0, letterIndex);
-            if (letterIndex === currentLine.length) { 
-                isRemoving = true; 
-                setTimeout(updateTyping, 1600);
-                return; }
-                } else { 
-                    letterIndex--; 
-                    typingText.textContent = currentLine.slice(0, letterIndex); 
-                    if (letterIndex === 0) { 
-                        isRemoving = false; 
-                        lineIndex = (lineIndex + 1) % lines.length; 
-                    }
-                 } 
-                 setTimeout(updateTyping, isRemoving ? 60 : 100);
-                }
-    function openNavigation() {
-        siteHeader.classList.add('nav-open'); 
-        navToggle.setAttribute('aria-expanded', 'true'); 
-        overlay.style.opacity = '1'; 
-        overlay.style.pointerEvents = 'all';
+function updateTyping() {
+  if (!typingText) return;
+  const currentLine = lines[lineIndex];
+
+  if (!isRemoving) {
+    letterIndex++;
+    typingText.textContent = currentLine.slice(0, letterIndex);
+    if (letterIndex === currentLine.length) {
+      isRemoving = true;
+      setTimeout(updateTyping, 1600);
+      return;
     }
-
-    function closeNavigation() {
-        siteHeader.classList.remove('nav-open'); 
-        navToggle.setAttribute('aria-expanded', 'false'); 
-        overlay.style.opacity = '0'; 
-        overlay.style.pointerEvents = 'none';
+  } else {
+    letterIndex--;
+    typingText.textContent = currentLine.slice(0, letterIndex);
+    if (letterIndex === 0) {
+      isRemoving = false;
+      lineIndex = (lineIndex + 1) % lines.length;
     }
+  }
+  setTimeout(updateTyping, isRemoving ? 60 : 100);
+}
 
-    navToggle.addEventListener('click', () => { 
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true'; 
-        if (expanded) {
-             closeNavigation(); 
-            } else { 
-                openNavigation(); 
-            } 
-        });
+// ---------- Mobile navigation ----------
+function openNavigation() {
+  if (!siteHeader) return;
+  siteHeader.classList.add('nav-open');
+  navToggle?.setAttribute('aria-expanded', 'true');
+  if (overlay) {
+    overlay.style.opacity = '1';
+    overlay.style.pointerEvents = 'all';
+  }
+}
 
-    overlay.addEventListener('click', closeNavigation); 
-    
-    navLinks.forEach((link) => {
+function closeNavigation() {
+  if (!siteHeader) return;
+  siteHeader.classList.remove('nav-open');
+  navToggle?.setAttribute('aria-expanded', 'false');
+  if (overlay) {
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+  }
+}
 
-    link.addEventListener('click', (event) => {
-
-        event.preventDefault();
-
-        const targetId = link.getAttribute('href');
-
-        const target = document.querySelector(targetId);
-
-        // ABOUT animation
-        if (targetId === '#about') {
-
-            const aboutImage =
-                document.querySelector('.about-media');
-
-            if (aboutImage) {
-
-                // Remove animation class
-                aboutImage.classList.remove('in-view');
-
-                // Force browser reflow
-                void aboutImage.offsetWidth;
-
-                // Add animation again
-                setTimeout(() => {
-                    aboutImage.classList.add('in-view');
-                }, 300);
-
-            }
-
-        }
-
-        if (target) {
-
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-
-        }
-
-        closeNavigation();
-
-    });
-
+navToggle?.addEventListener('click', () => {
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+  expanded ? closeNavigation() : openNavigation();
 });
 
-    function revealSections() { 
-         const revealItems = document.querySelectorAll(
-    '.section-heading, .about-media, .about-copy, .skill-card, .experience-card, .project-card, .contact-card, .contact-form'
-);
-    const observer = new IntersectionObserver((entries) => {
+overlay?.addEventListener('click', closeNavigation);
 
-            entries.forEach((entry) => {
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetId = link.getAttribute('href');
+    const target = document.querySelector(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    closeNavigation();
+  });
+});
 
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeNavigation();
+});
+
+// ---------- Active nav link on scroll ----------
+function highlightNav() {
+  const scrollPosition = window.scrollY + 120;
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const link = document.querySelector(`.main-nav a[href="#${section.id}"]`);
+    if (!link) return;
+    if (scrollPosition >= top && scrollPosition < top + height) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', highlightNav, { passive: true });
+
+// ---------- Reveal-on-scroll (single observer, created once) ----------
+function initReveal() {
+  const revealItems = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || revealItems.length === 0) {
+    revealItems.forEach((item) => item.classList.add('in-view'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-
-            entry.target.classList.add('in-view');
-
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
         }
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+  );
 
-    });
+  revealItems.forEach((item) => observer.observe(item));
+}
 
-}, {
-    threshold: 0.3
-});
+// ---------- Contact form (AJAX submit, no page navigation) ----------
+if (form) {
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.textContent : '';
 
-revealItems.forEach((item) => {
-    observer.observe(item);
-});
-
-
-window.addEventListener('scroll', () => {
-    highlightNav();
-});
-        }
-
-    function highlightNav() { 
-        const scrollPosition = window.scrollY + 120; 
-        sections.forEach((section) => { 
-            const top = section.offsetTop;
-            const height = section.offsetHeight; 
-            const link = document.querySelector(`.main-nav a[href="#${section.id}"]`); 
-            if (!link) return; 
-            if (scrollPosition >= top && scrollPosition < top + height) { 
-                link.classList.add('active'); 
-            } else {
-                link.classList.remove('active');
-            } 
-        });
+    if (feedback) {
+      feedback.classList.remove('is-error');
+      feedback.textContent = 'Sending...';
+    }
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
     }
 
-    window.addEventListener('scroll', () => { 
-        revealSections(); 
-        highlightNav(); 
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
 
-    window.addEventListener("load", () => {
+      if (!response.ok) throw new Error('Request failed');
 
-    if (document.body.classList.contains("dark")) {
-
-        icon.className = "fa-solid fa-sun";
-        themeToggle.title = "Light mode";
-
+      if (feedback) feedback.textContent = 'Thanks for reaching out! I will get back to you soon.';
+      form.reset();
+    } catch (err) {
+      if (feedback) {
+        feedback.classList.add('is-error');
+        feedback.textContent = 'Something went wrong sending that. Please email me directly at haridoss678@gmail.com.';
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
     }
+  });
+}
 
+// ---------- Init ----------
+document.addEventListener('DOMContentLoaded', () => {
+  updateTyping();
+  highlightNav();
+  initReveal();
 });
-
-    window.addEventListener('keydown', (event) => { 
-        if (event.key === 'Escape') {
-            closeNavigation(); 
-        } 
-    });
-    
-    form.addEventListener('submit', (event) => { 
-        event.preventDefault(); 
-        const feedback = document.getElementById('formFeedback'); 
-        feedback.textContent = 'Thanks for reaching out! I will get back to you soon.'; 
-        form.reset(); 
-    });
-
-    document.addEventListener('DOMContentLoaded', () => { 
-        updateTyping(); 
-        //revealSections(); 
-        highlightNav(); 
-    });
-

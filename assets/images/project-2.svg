@@ -1,1 +1,60 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#A9D8F3"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs><rect width="1200" height="760" rx="48" fill="url(#g)"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="72" fill="#1A1A1A">Plant Disease Detection</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Plant Disease Detection app interface">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1120"/><stop offset="1" stop-color="#10291F"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <clipPath id="win"><rect x="40" y="40" width="1120" height="680" rx="22"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="200" fill="#34D399" opacity="0.1"/>
+  <circle cx="120" cy="700" r="180" fill="#38BDF8" opacity="0.1"/>
+  <rect x="40" y="40" width="1120" height="680" rx="22" fill="#0B1526" stroke="#1E293B" stroke-width="2"/>
+
+  <g clip-path="url(#win)" font-family="Inter, system-ui, sans-serif">
+    <rect x="40" y="40" width="1120" height="58" fill="#0F1D33"/>
+    <circle cx="80" cy="69" r="8" fill="#F87171"/>
+    <circle cx="110" cy="69" r="8" fill="#FBBF24"/>
+    <circle cx="140" cy="69" r="8" fill="#34D399"/>
+    <text x="600" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="23" fill="#64748B">plant-disease-detector</text>
+    <line x1="40" y1="98" x2="1160" y2="98" stroke="#1E293B" stroke-width="2"/>
+
+    <text x="80" y="160" font-family="Space Grotesk, Inter, sans-serif" font-size="40" font-weight="700" fill="#F1F5F9">Leaf Disease Classifier</text>
+
+    <rect x="80" y="192" width="430" height="404" rx="16" fill="#0A1120" stroke="#1E293B" stroke-width="2"/>
+    <g transform="translate(295,394) scale(0.62) translate(-600,-260)">
+      <path d="M600 110c118 54 156 186 0 300-156-114-118-246 0-300z" fill="url(#leaf)" opacity="0.92"/>
+      <path d="M600 132v252" stroke="#0A1120" stroke-width="9" stroke-linecap="round" opacity="0.5"/>
+      <path d="M600 196l62-38M600 256l70-44M600 316l58-38M600 196l-62-38M600 256l-70-44M600 316l-58-38"
+            stroke="#0A1120" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+    </g>
+    <rect x="207" y="288" width="176" height="212" rx="8" fill="none" stroke="#34D399" stroke-width="3" stroke-dasharray="14 10"/>
+    <rect x="207" y="250" width="132" height="34" rx="8" fill="#34D399"/>
+    <text x="273" y="275" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="600" fill="#052E20">leaf 0.92</text>
+    <text x="295" y="638" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" fill="#64748B">uploaded_leaf.jpg</text>
+
+    <text x="570" y="228" font-family="IBM Plex Mono, monospace" font-size="22" fill="#34D399" letter-spacing="3">CLASSIFICATION</text>
+    <text x="570" y="296" font-family="Space Grotesk, Inter, sans-serif" font-size="58" font-weight="700" fill="#F1F5F9">Healthy</text>
+
+    <text x="570" y="372" font-size="25" fill="#CBD5E1">Healthy</text>
+    <text x="1096" y="372" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="25" fill="#34D399">92%</text>
+    <rect x="570" y="388" width="526" height="18" rx="9" fill="#1E293B"/>
+    <rect x="570" y="388" width="484" height="18" rx="9" fill="#34D399"/>
+
+    <text x="570" y="456" font-size="25" fill="#94A3B8">Early Blight</text>
+    <text x="1096" y="456" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="25" fill="#64748B">6%</text>
+    <rect x="570" y="472" width="526" height="18" rx="9" fill="#1E293B"/>
+    <rect x="570" y="472" width="32" height="18" rx="9" fill="#38BDF8"/>
+
+    <text x="570" y="540" font-size="25" fill="#94A3B8">Late Blight</text>
+    <text x="1096" y="540" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="25" fill="#64748B">2%</text>
+    <rect x="570" y="556" width="526" height="18" rx="9" fill="#1E293B"/>
+    <rect x="570" y="556" width="14" height="18" rx="7" fill="#38BDF8"/>
+
+    <rect x="570" y="608" width="330" height="52" rx="12" fill="#1E293B"/>
+    <text x="594" y="642" font-family="IBM Plex Mono, monospace" font-size="22" fill="#94A3B8">CNN &#183; TensorFlow</text>
+  </g>
+</svg>

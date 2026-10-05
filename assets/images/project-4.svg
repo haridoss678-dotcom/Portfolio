@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="AI Email Automation data pipeline interface">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1120"/><stop offset="1" stop-color="#191E3F"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <clipPath id="win"><rect x="40" y="40" width="1120" height="680" rx="22"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="200" fill="#818CF8" opacity="0.12"/>
+  <circle cx="120" cy="700" r="180" fill="#38BDF8" opacity="0.1"/>
+  <rect x="40" y="40" width="1120" height="680" rx="22" fill="#0B1526" stroke="#1E293B" stroke-width="2"/>
+
+  <g clip-path="url(#win)" font-family="Inter, system-ui, sans-serif">
+    <rect x="40" y="40" width="1120" height="58" fill="#0F1D33"/>
+    <circle cx="80" cy="69" r="8" fill="#F87171"/>
+    <circle cx="110" cy="69" r="8" fill="#FBBF24"/>
+    <circle cx="140" cy="69" r="8" fill="#34D399"/>
+    <text x="600" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="23" fill="#64748B">email-pipeline &#183; gmail &#8594; zoho</text>
+    <line x1="40" y1="98" x2="1160" y2="98" stroke="#1E293B" stroke-width="2"/>
+
+    <rect x="70" y="140" width="410" height="456" rx="16" fill="#0A1120" stroke="#1E293B" stroke-width="2"/>
+    <text x="96" y="186" font-family="IBM Plex Mono, monospace" font-size="21" fill="#38BDF8" letter-spacing="3">INBOX</text>
+
+    <rect x="92" y="204" width="366" height="86" rx="12" fill="#0F1D33" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="2"/>
+    <rect x="92" y="204" width="6" height="86" rx="3" fill="#38BDF8"/>
+    <text x="116" y="240" font-size="23" fill="#E2E8F0">Invoice #4821 &#183; Acme Corp</text>
+    <text x="116" y="270" font-size="20" fill="#64748B">accounts@acmecorp.com</text>
+
+    <rect x="92" y="304" width="366" height="86" rx="12" fill="#0F1D33"/>
+    <rect x="92" y="304" width="6" height="86" rx="3" fill="#818CF8"/>
+    <text x="116" y="340" font-size="23" fill="#94A3B8">PO Confirmation &#183; Vertex</text>
+    <text x="116" y="370" font-size="20" fill="#64748B">orders@vertex.io</text>
+
+    <rect x="92" y="404" width="366" height="86" rx="12" fill="#0F1D33"/>
+    <rect x="92" y="404" width="6" height="86" rx="3" fill="#34D399"/>
+    <text x="116" y="440" font-size="23" fill="#94A3B8">Delivery Note &#183; Nova Ltd</text>
+    <text x="116" y="470" font-size="20" fill="#64748B">dispatch@novaltd.in</text>
+
+    <rect x="92" y="504" width="366" height="72" rx="12" fill="#0F1D33"/>
+    <rect x="92" y="504" width="6" height="72" rx="3" fill="#FBBF24"/>
+    <text x="116" y="548" font-size="23" fill="#94A3B8">Quote Request &#183; Zenix</text>
+
+    <path d="M494 366h26" stroke="url(#acc)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M514 358l10 8-10 8" fill="none" stroke="url(#acc)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="532" y="336" width="196" height="60" rx="30" fill="#818CF8" fill-opacity="0.16" stroke="#818CF8" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="630" y="374" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" fill="#A5B4FC">Gemini AI</text>
+    <path d="M740 366h26" stroke="url(#acc)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M760 358l10 8-10 8" fill="none" stroke="url(#acc)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="782" y="140" width="348" height="456" rx="16" fill="#0A1120" stroke="#1E293B" stroke-width="2"/>
+    <text x="808" y="186" font-family="IBM Plex Mono, monospace" font-size="21" fill="#818CF8" letter-spacing="2">EXTRACTED RECORD</text>
+
+    <text x="808" y="236" font-family="IBM Plex Mono, monospace" font-size="19" fill="#64748B" letter-spacing="2">INVOICE NO</text>
+    <text x="808" y="268" font-size="25" fill="#E2E8F0">4821</text>
+    <line x1="808" y1="288" x2="1104" y2="288" stroke="#1E293B" stroke-width="2"/>
+
+    <text x="808" y="326" font-family="IBM Plex Mono, monospace" font-size="19" fill="#64748B" letter-spacing="2">VENDOR</text>
+    <text x="808" y="358" font-size="25" fill="#E2E8F0">Acme Corp</text>
+    <line x1="808" y1="378" x2="1104" y2="378" stroke="#1E293B" stroke-width="2"/>
+
+    <text x="808" y="416" font-family="IBM Plex Mono, monospace" font-size="19" fill="#64748B" letter-spacing="2">AMOUNT</text>
+    <text x="808" y="448" font-size="25" fill="#E2E8F0">INR 48,200</text>
+    <line x1="808" y1="468" x2="1104" y2="468" stroke="#1E293B" stroke-width="2"/>
+
+    <text x="808" y="506" font-family="IBM Plex Mono, monospace" font-size="19" fill="#64748B" letter-spacing="2">DATE</text>
+    <text x="808" y="538" font-size="25" fill="#E2E8F0">12 Sep 2026</text>
+
+    <rect x="808" y="562" width="296" height="54" rx="12" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.4" stroke-width="2"/>
+    <path d="M834 589l11 11 19-21" fill="none" stroke="#34D399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="878" y="597" font-family="IBM Plex Mono, monospace" font-size="20" fill="#34D399">Pushed to Zoho</text>
+  </g>
+</svg>
